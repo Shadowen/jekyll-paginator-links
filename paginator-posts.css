@@ -12,7 +12,7 @@ body {
 }
 
 .paginator {
-    background-image: url("{{site.baseurl}}/index-bg.jpg");
+    background-image: url("https://cdn.rawgit.com/Shadowen/jekyll-paginator-links/d3e21cbdebed22e31e11b60e11e2181fc4b63ce5/index-bg.jpg");
     background-size: cover;
     min-height: 100vh;
 }
