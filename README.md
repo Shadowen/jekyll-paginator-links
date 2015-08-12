@@ -1,3 +1,5 @@
+Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) function to generate a list of links to pages.
+
 [Live demo](http://shadowen.github.com/Jekyll-paginator-links)
 
 # Usage
@@ -8,3 +10,8 @@
 1. In your `index.html` (or wherever you're paginating), paste the following segment:
 		<style>{% include paginator-links.css %}</style>
 		{% include paginator-links.html maxPages=5 %}
+
+# Inspiration
+- http://stackoverflow.com/questions/14025597/liquid-and-arithmetic
+- http://stackoverflow.com/questions/27963027/jekyll-long-pagination-how-to-shorten-it
+- http://stackoverflow.com/questions/30125878/can-i-have-a-proper-nice-tiled-pagination-in-jekyll-using-liquid-templates

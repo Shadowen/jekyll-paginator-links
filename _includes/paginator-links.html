@@ -25,7 +25,7 @@
 
   <!-- Previous page -->
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    <a href="{{site.baseurl}}{{paginator.previous_page_path}}" class="previous">Previous</a>
   {% else %}
     <span class="previous">Previous</span>
   {% endif %}
@@ -36,29 +36,29 @@
   {% endif %}
 
   <!-- Page numbers -->
-  <span class="paginator-numbers">
+  <span class="numbers">
   {% for num  in (start..end)%}
   	{% if num == paginator.page %}
-  	  <span class="paginator-number current">{{ num }}</span>
+  	  <span class="number current">{{ num }}</span>
   	{% elsif num == 1 %}
-  	  <a class="paginator-number" href="/">{{ num }}</a>
+  	  <a class="number" href="{{site.baseurl}}">{{ num }}</a>
   	{% else %}
-  	  <a class="paginator-number" href="/page{{num}}">{{ num }}</a>
+  	  <a class="number" href="{{site.baseurl}}page{{num}}">{{ num }}</a>
   	{% endif %}
     {% unless forloop.last %}
-      <span class="paginator-seperator"></span>
+      <span class="seperator"></span>
     {% endunless %}
   {% endfor %}
   </span>
 
   <!-- End ellipsis -->
   {% if end < paginator.total_pages %}
-    <span class="paginator end-ellipsis"></span>
+    <span class="end-ellipsis"></span>
   {% endif %}
 
   <!-- Next page -->
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{site.baseurl}}{{paginator.next_page_path}}" class="next">Next</a>
   {% else %}
     <span class="next ">Next</span>
   {% endif %}

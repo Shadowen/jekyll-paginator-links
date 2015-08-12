@@ -1,0 +1,41 @@
+.paginator-links {
+    text-align: center;
+    padding: 2em;
+}
+
+.paginator-links .start-ellipsis::before,
+.paginator-links .end-ellipsis::before {
+    content: '...';
+}
+
+.paginator-links .seperator::before {
+    content: ',';
+}
+
+.paginator-links .numbers {}
+
+.paginator-links .previous,
+.paginator-links .next,
+.paginator-links .number {
+    border-radius: 1em;
+    background-color: rgba(0, 200, 0, 0.5);
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.paginator-links a {
+    text-decoration: none;
+}
+
+.paginator-links a:link {
+    color: rgb(255, 0, 0);
+}
+
+.paginator-links a:visited {
+    color: rgb(0, 255, 0);
+}
+
+.paginator-links .number.current {
+    background-color: rgba(0, 220, 0, 0.7);
+    font-weight: bold;
+}

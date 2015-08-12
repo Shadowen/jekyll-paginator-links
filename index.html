@@ -1,17 +1,23 @@
 ---
-maxPages: 3
 ---
-
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/paginator-posts.css">
 <!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
-{% endfor %}
+<div class="paginator">
+	<h1 align="center">Jekyll Paginator Links <small>(<a href="https://github.com/Shadowen/Jekyll-paginator-links">Github repository</a>)</small></h1>
+	<div class="posts">
+	{% for post in paginator.posts %}
+		<div class="post">
+			<h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<p>Author: <span class="author">{{ post.author }}</span></p>
+			<p>Date: <span class="date">{{ post.date }}</span></p>
+		  	<div class="excerpt">
+		    	{{ post.excerpt }}
+			</div>
+		</div>
+	{% endfor %}
+	</div>
 
-<style>{% include paginator-links.css %}</style>
-{% include paginator-links.html maxPages=5 %}
+	<!-- Generate the links to other pages -->
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/paginator-links.css">
+	{% include paginator-links.html maxPages=5 %}
+</div>
