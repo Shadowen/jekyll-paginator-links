@@ -1,7 +1,12 @@
+/* The container */
+
 .paginator-links {
     text-align: center;
     padding: 2em;
 }
+
+
+/* Text components */
 
 .paginator-links .start-ellipsis::before,
 .paginator-links .end-ellipsis::before {
@@ -12,10 +17,31 @@
     content: ',';
 }
 
+.paginator-links .first-page::before {
+    content: 'First';
+}
+
+.paginator-links .previous-page::before {
+    content: 'Previous';
+}
+
+.paginator-links .next-page::before {
+    content: 'Next';
+}
+
+.paginator-links .last-page::before {
+    content: 'Last';
+}
+
+
+/* The actual buttons */
+
 .paginator-links .numbers {}
 
-.paginator-links .previous,
-.paginator-links .next,
+.paginator-links .first-page::before,
+.paginator-links .previous-page::before,
+.paginator-links .next-page::before,
+.paginator-links .last-page::before,
 .paginator-links .number {
     border-radius: 1em;
     background-color: rgba(0, 200, 0, 0.5);

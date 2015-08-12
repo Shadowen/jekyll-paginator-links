@@ -23,11 +23,18 @@
     {% assign end = paginator.page | plus: halfPages | append: ',' | append: paginator.total_pages | split: ',' | sort | first | plus: 0 %}
   {% endif %}
 
+  <!-- First page -->
+  {% if paginator.previous_page %}
+    <a href="{{ site.baseurl }}/" class="first-page"></a>
+  {% else %}
+    <span class="first-page"></span>
+  {% endif %}
+
   <!-- Previous page -->
   {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}/{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    <a href="{{ site.baseurl }}/{{ paginator.previous_page_path }}" class="previous-page"></a>
   {% else %}
-    <span class="previous">Previous</span>
+    <span class="previous-page"></span>
   {% endif %}
 
   <!-- Start ellipsis -->
@@ -58,8 +65,15 @@
 
   <!-- Next page -->
   {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}/{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ site.baseurl }}/{{ paginator.next_page_path }}" class="next-page"></a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="next-page"></span>
+  {% endif %}
+
+  <!-- Last page -->
+  {% if paginator.next_page %}
+    <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="last-page"></a>
+  {% else %}
+    <span class="last-page"></span>
   {% endif %}
 </div>
