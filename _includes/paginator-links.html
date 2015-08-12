@@ -1,0 +1,65 @@
+<!-- Paginator Links -->
+<div class="paginator-links">
+  {% if include.maxPages %}
+    {% assign maxPages = include.maxPages %}
+  {% else %}
+    <!-- maxPages attribute not passed in Liquid template, defaulting to 5 -->
+    {% assign maxPages = 5 %}
+  {% endif %}
+
+  {% assign right-margin = paginator.total_pages | minus: paginator.page %}
+  {% if paginator.page <= halfPages %}
+    <!-- left-align -->
+    {% assign start = 1 %}
+    {% assign end = maxPages | append: ',' | append: paginator.total_pages | split: ',' | sort | first | plus: 0 %}
+  {% elsif right-margin <= halfPages %}
+    <!-- right-align -->
+    {% assign start = paginator.total_pages | minus: maxPages | plus: 1 | append: ',' | append: 1 | split: ',' | sort | last | plus: 0 %}
+    {% assign end = paginator.total_pages %}
+  {% else %}
+    <!-- center-align -->
+    {% assign halfPages = maxPages | divided_by: 2 %}
+    {% assign start = paginator.page | minus: halfPages | append: ',' | append: 1 | split: ',' | sort | last | plus: 0 %}
+    {% assign end = paginator.page | plus: halfPages | append: ',' | append: paginator.total_pages | split: ',' | sort | first | plus: 0 %}
+  {% endif %}
+
+  <!-- Previous page -->
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+
+  <!-- Start ellipsis -->
+  {% if start > 1 %}
+    <span class="start-ellipsis"></span>
+  {% endif %}
+
+  <!-- Page numbers -->
+  <span class="paginator-numbers">
+  {% for num  in (start..end)%}
+  	{% if num == paginator.page %}
+  	  <span class="paginator-number current">{{ num }}</span>
+  	{% elsif num == 1 %}
+  	  <a class="paginator-number" href="/">{{ num }}</a>
+  	{% else %}
+  	  <a class="paginator-number" href="/page{{num}}">{{ num }}</a>
+  	{% endif %}
+    {% unless forloop.last %}
+      <span class="paginator-seperator"></span>
+    {% endunless %}
+  {% endfor %}
+  </span>
+
+  <!-- End ellipsis -->
+  {% if end < paginator.total_pages %}
+    <span class="paginator end-ellipsis"></span>
+  {% endif %}
+
+  <!-- Next page -->
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

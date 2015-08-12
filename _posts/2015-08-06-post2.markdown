@@ -1,0 +1,6 @@
+---
+layout: post
+tags: [tag1, tag2]
+---
+{{page.class}}
+A second post
