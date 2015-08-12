@@ -23,7 +23,7 @@ Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) 
 Some useful selectors to use in the stylesheet `paginator-links.css`.
 
 | CSS Selector | Component | Description |
-| ------------------------------------------ | --------- | ----------- |
+| --- |:---:| --- |
 | `.paginator-links` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231716/a9a98080-40f7-11e5-95f5-37adf0da9e5d.png) | A wrapper for the entire generate set of links. |
 | `.paginator-links .start-ellipsis::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9232101/bbf1b97c-40f9-11e5-8eeb-886a337f1138.png) | The `content` attribute is the text shown when page numbers have been truncated from the beginning of the list. |
 | `.paginator-links .end-ellipsis::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231951/01eb42b4-40f9-11e5-9438-20b7b49bca4f.png) | The `content` attribute is the text shown when page numbers have been truncated from the end of the list. |
