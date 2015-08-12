@@ -1,5 +1,7 @@
 Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) function to generate a list of links to pages. Fully customizable in Liquid and CSS.
 
+![image](https://cloud.githubusercontent.com/assets/8551479/9233896/b3d21a5c-4103-11e5-94e1-0a4b6af4abb1.png)
+
 # [Live demo](http://shadowen.github.io/jekyll-paginator-links/)
 
 # Usage
