@@ -11,7 +11,7 @@ body {
 }
 
 .paginator {
-    background-image: url("{{site.baseurl}}/res/index-bg.jpg");
+    background-image: url("{{site.baseurl}}/index-bg.jpg");
     background-size: cover;
     min-height: 100%;
 }
