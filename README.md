@@ -1,6 +1,6 @@
 Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) function to generate a list of links to pages.
 
-[Live demo](http://shadowen.github.io/Jekyll-paginator-links)
+# [Live demo](http://shadowen.github.io/Jekyll-paginator-links)
 
 # Usage
 1. In your `_config.yml`, add the line:
