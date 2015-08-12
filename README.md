@@ -4,14 +4,14 @@ Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) 
 
 # Usage
 1. In your `_config.yml`, add the line:
-```
+```yaml
 	paginate: 5
 ```
   - Note the number you set here is the number of posts/page.
 1. Copy `includes/paginator-links.html` to your own `_includes/` folder.
 1. Copy `paginator-links.css` to your own root folder. (See [below](#why-root))
 1. In your `index.html` (or wherever you're paginating), paste the following segment:
-```
+```liquid
 	<style>{% include paginator-links.css %}</style>
 	{% include paginator-links.html maxPages=5 %}
 ```
