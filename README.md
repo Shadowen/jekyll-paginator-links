@@ -1,4 +1,4 @@
-Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) function to generate a list of links to pages. Fully customizable in Liquid and CSS.
+Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) function to generate a truncated list of links to pages. Fully customizable in Liquid and CSS.
 
 ![image](https://cloud.githubusercontent.com/assets/8551479/9233896/b3d21a5c-4103-11e5-94e1-0a4b6af4abb1.png)
 
@@ -29,7 +29,7 @@ Some useful selectors to use in the stylesheet `paginator-links.css`.
 | --- |:---:| --- |
 | `.paginator-links` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231716/a9a98080-40f7-11e5-95f5-37adf0da9e5d.png) | A wrapper for the entire generated set of links. |
 | `.paginator-links .start-ellipsis::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9232101/bbf1b97c-40f9-11e5-8eeb-886a337f1138.png) | The `content` attribute is the text shown when page numbers have been truncated from the beginning of the list. |
-| `.paginator-links .end-ellipsis::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231951/01eb42b4-40f9-11e5-9438-20b7b49bca4f.png) | The `content` attribute is the text shown when page numbers have been truncated from the end of the list. |
+| `.paginator-links .end-ellipsis::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9234345/4f79839e-4106-11e5-8d99-c5c44b0c084f.png) | The `content` attribute is the text shown when page numbers have been truncated from the end of the list. |
 | `.paginator-links .seperator::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231893/a164b6e6-40f8-11e5-8837-424dd4516d85.png) | The characters to use as seperators between page numbers. |
 | `.paginator-links .first-page::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231744/d9d8411a-40f7-11e5-8164-ac27a42ac71f.png) | The `content` attribute is the text to use for the link to the first page. If blank, the "First Page" link will not be displayed. |
 | `.paginator-links .previous-page::before` | ![image](https://cloud.githubusercontent.com/assets/8551479/9231770/fc8d67e4-40f7-11e5-98c5-6135b952c97b.png) |  The `content` attribute of this is the text to use for the link to the previous page. If blank, the "Previous Page" link will not be displayed. |
