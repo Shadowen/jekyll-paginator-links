@@ -42,8 +42,8 @@
     <span class="start-ellipsis"></span>
   {% endif %}
 
-  <!-- Page numbers -->
-  <span class="numbers">
+    <!-- Page numbers -->
+    <span class="numbers">
   {% for num  in (start..end)%}
   	{% if num == paginator.page %}
   	  <span class="number current">{{ num }}</span>
