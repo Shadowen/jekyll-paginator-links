@@ -17,6 +17,7 @@ body {
 }
 
 .paginator > h1 {
+    margin: 0;
     color: rgb(255, 255, 255);
 }
 
