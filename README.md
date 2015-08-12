@@ -9,7 +9,7 @@ Works together with [Jekyll's Pagination](http://jekyllrb.com/docs/pagination/) 
   paginate: 5
   ```
   Note the number you set here is the number of posts/page.
-2. Copy [`includes/paginator-links.html`](https://raw.githubusercontent.com/Shadowen/jekyll-paginator-links/gh-pages/_includes/paginator-links.html) to your own `_includes/` folder.
+2. Copy [`_includes/paginator-links.html`](https://raw.githubusercontent.com/Shadowen/jekyll-paginator-links/gh-pages/_includes/paginator-links.html) to your own `_includes/` folder.
 3. Copy [`paginator-links.css`](https://raw.githubusercontent.com/Shadowen/jekyll-paginator-links/gh-pages/paginator-links.css) to your own root folder. (See [below](#why-root))
 4. In your `index.html` (or wherever you're paginating), paste the following segment:
 
