@@ -7,6 +7,7 @@
     {% assign maxPages = 5 %}
   {% endif %}
 
+  {% assign halfPages = maxPages | divided_by: 2 %}
   {% assign right-margin = paginator.total_pages | minus: paginator.page %}
   {% if paginator.page <= halfPages %}
     <!-- left-align -->
@@ -18,7 +19,6 @@
     {% assign end = paginator.total_pages %}
   {% else %}
     <!-- center-align -->
-    {% assign halfPages = maxPages | divided_by: 2 %}
     {% assign start = paginator.page | minus: halfPages | append: ',' | append: 1 | split: ',' | sort | last | plus: 0 %}
     {% assign end = paginator.page | plus: halfPages | append: ',' | append: paginator.total_pages | split: ',' | sort | first | plus: 0 %}
   {% endif %}
